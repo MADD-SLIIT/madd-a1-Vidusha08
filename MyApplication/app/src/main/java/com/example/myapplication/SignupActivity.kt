@@ -87,7 +87,7 @@ class SignupActivity : AppCompatActivity() {
                     .set(userModel).addOnSuccessListener {
                         UiUtil.showToast(applicationContext, "Account created successfully")
                         setInProgress(false)
-                        startActivity(Intent(this,MainActivity::class.java))
+                        startActivity(Intent(this,HomeActivity::class.java))
                         finish()
                     }
             }

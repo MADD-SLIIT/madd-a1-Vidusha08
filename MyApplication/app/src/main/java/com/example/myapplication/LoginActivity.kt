@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
         ).addOnSuccessListener{
             UiUtil.showToast(this, "Login Successfully")
             setInProgress(false)
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,HomeActivity::class.java))
             finish()
         }.addOnFailureListener {
             UiUtil.showToast(applicationContext,it.localizedMessage?: "Something went wrong")
