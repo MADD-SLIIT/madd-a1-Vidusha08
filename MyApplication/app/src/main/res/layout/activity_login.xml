@@ -10,12 +10,12 @@
     android:gravity="center_horizontal"
     android:layout_marginTop="16dp"
     android:background="@drawable/background"
-    tools:context=".SignupActivity">
+    tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/logo"/>
 
     <LinearLayout
@@ -23,12 +23,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
 
 
-        <EditText
+        <!--<EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username_input"
@@ -37,7 +38,7 @@
             android:textColorHint="#62A1AD"
             android:inputType="textPersonName"
             android:padding="12dp"
-            android:layout_margin="12dp" />
+            android:layout_margin="12dp" /> -->
 
         <EditText
             android:layout_width="match_parent"
@@ -61,37 +62,26 @@
             android:padding="12dp"
             android:layout_margin="12dp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/confirm_password_input"
-            android:background="@drawable/signup_box"
-            android:hint="Confirm Password"
-            android:textColorHint="#62A1AD"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:layout_margin="12dp" />
-
         <Button
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:id="@+id/signup_btn"
-            android:text="SIGN UP"
+            android:text="Login"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:padding="10dp"/>
 
         <ProgressBar
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:id="@+id/s_progress_bar"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:padding="10dp"
             android:visibility="gone"/>
-        
+
     </LinearLayout>
-    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,7 +91,7 @@
         android:textColor="#0C5F6F"
         android:textStyle="bold"
         android:letterSpacing="0.07"
-        android:layout_margin="20dp"/>
+        android:layout_margin="30dp"/>
 
     <!-- Social media logos -->
     <LinearLayout
@@ -110,7 +100,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginBottom="15dp">
-        
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -136,21 +126,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already Have an Account? "
+            android:text="Don't Have an Account? "
             android:textColor="#0C5F6F"
             android:textSize="14sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/login_text"
-            android:text="Login"
+            android:id="@+id/signup_text"
+            android:text="Sign Up"
             android:textColor="#23D2F4"
             android:textStyle="bold"
             android:textSize="14sp"
             android:clickable="true"
             android:focusable="true"
-            android:layout_marginLeft="4dp"/>
+            android:layout_marginLeft="4dp" />
 
     </LinearLayout>
 
