@@ -18,6 +18,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -53,3 +57,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+

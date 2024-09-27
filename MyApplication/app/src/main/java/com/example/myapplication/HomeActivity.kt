@@ -21,27 +21,27 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.placeImg1.setOnClickListener {
-            navigateToManiActivity()
+            navigateToDetailsActivity()
         }
 
         binding.placeName1.setOnClickListener {
-            navigateToManiActivity()
+            navigateToDetailsActivity()
         }
 
         binding.placeDesc1.setOnClickListener {
-            navigateToManiActivity()
+            navigateToDetailsActivity()
         }
 
         binding.placeImg2.setOnClickListener {
-            navigateToManiActivity()
+            navigateToDetailsActivity()
         }
 
         binding.placeName2.setOnClickListener {
-            navigateToManiActivity()
+            navigateToDetailsActivity()
         }
 
         binding.placeDesc2.setOnClickListener {
-            navigateToManiActivity()
+            navigateToDetailsActivity()
         }
 
         binding.bottomNavigation.setOnItemSelectedListener {menuItem->
@@ -66,8 +66,8 @@ class HomeActivity : AppCompatActivity() {
             false
         }
     }
-    private fun navigateToManiActivity() {
-        val intent = Intent(this, MainActivity::class.java)
+    private fun navigateToDetailsActivity() {
+        val intent = Intent(this, DetailsActivity::class.java)
         startActivity(intent)
     }
 }

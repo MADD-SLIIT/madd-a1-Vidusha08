@@ -8,8 +8,7 @@
     tools:context=".HomeActivity"
     android:gravity="center_horizontal">
 
-
-    <!-- Logo-->
+    <!-- Logo -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="240dp"
@@ -47,9 +46,8 @@
                 android:layout_height="24dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/icon_search"
-                android:backgroundTint="#0C5F6F" />
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_search"/>
 
             <!-- Explore Text -->
             <TextView
@@ -60,9 +58,9 @@
                 android:layout_marginStart="20dp"
                 android:layout_centerVertical="true"
                 android:text="Explore"
-                android:textColor="#0C5F6F"
+                android:textColor="@color/my_primary"
                 android:textSize="18sp" />
-            </RelativeLayout>
+        </RelativeLayout>
 
         <!-- World Icon -->
         <ImageView
@@ -72,8 +70,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/icon_language"
-            android:backgroundTint="#0C5F6F"
-            android:layout_marginStart="10dp"/>
+            android:layout_marginStart="10dp" />
 
     </RelativeLayout>
 
@@ -85,7 +82,7 @@
         android:text="Top Destinations"
         android:layout_marginStart="20dp"
         android:textColor="#0C5F6F"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -97,13 +94,22 @@
         android:layout_marginTop="200dp">
 
         <!-- Destination Image -->
-        <ImageView
-            android:id="@+id/place_img_1"
-            android:layout_width="400dp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
             android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/place_img_1"
-            android:layout_marginBottom="5dp" />
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/place_img_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/place_img_1" />
+
+        </androidx.cardview.widget.CardView>
 
         <!-- Horizontal layout for text  -->
         <LinearLayout
@@ -116,7 +122,7 @@
 
             <!-- Text Section (Name and Description) -->
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="40dp"
@@ -128,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Beddagana Wetland Park"
-                    android:textColor="#0C5F6F"
+                    android:textColor="@color/my_primary"
                     android:textStyle="bold"
                     android:textSize="16sp" />
 
@@ -138,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Best Wetland Park Near Capital"
-                    android:textColor="#0C5F6F"
+                    android:textColor="@color/my_primary"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -149,8 +155,7 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_bookmark"
-                android:backgroundTint="#0C5F6F"  />
+                android:src="@drawable/ic_bookmark" />
 
         </LinearLayout>
 
@@ -165,13 +170,23 @@
         android:layout_marginTop="470dp">
 
         <!-- Destination Image -->
-        <ImageView
-            android:id="@+id/place_img_2"
-            android:layout_width="400dp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
             android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/place_img_2"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/place_img_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/place_img_2"
+                android:layout_marginBottom="5dp" />
+
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -181,9 +196,9 @@
             android:gravity="center_vertical"
             android:padding="10dp">
 
-            <!-- (Name and Description) -->
+            <!-- Text Section (Name and Description) -->
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="40dp"
@@ -195,7 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="YaLa National Wildlife Park"
-                    android:textColor="#0C5F6F"
+                    android:textColor="@color/my_primary"
                     android:textStyle="bold"
                     android:textSize="16sp" />
 
@@ -205,7 +220,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2nd Largest National Park of Sri lanka"
-                    android:textColor="#0C5F6F"
+                    android:textColor="@color/my_primary"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -216,8 +231,7 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_bookmark"
-                android:backgroundTint="#0C5F6F"  />
+                android:src="@drawable/ic_bookmark" />
 
         </LinearLayout>
 
@@ -228,11 +242,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu"
-        android:background="#0C5F6F"
+        android:background="@color/my_primary"
         android:layout_alignParentBottom="true"
-        app:itemIconTint="@color/bottom_nav_icon_color"
-        app:itemTextColor="@color/bottom_nav_icon_color"
+        app:itemIconTint="@color/my_primary2"
+        app:itemTextColor="@color/my_primary2"
         app:labelVisibilityMode="unlabeled"
-        app:itemIconSize="32dp"/>
+        app:itemIconSize="32dp" />
 
 </RelativeLayout>

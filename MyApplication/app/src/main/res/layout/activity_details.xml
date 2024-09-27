@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailsActivity">
+
+    <!-- Destination Image at the top -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <!-- Destination Image with rounded corners -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/destination_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/place_img_1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Circle with Back Icon -->
+        <FrameLayout
+            android:id="@+id/left_circle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle_shape"
+            android:layout_alignParentStart="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/icon_back" />
+        </FrameLayout>
+
+        <!-- Circle with Bookmark -->
+        <FrameLayout
+            android:id="@+id/right_circle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle_shape"
+            android:layout_alignParentEnd="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bookmark_icon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/ic_bookmark2" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Destination Name -->
+            <TextView
+                android:id="@+id/top_destinations_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beddagana Wetland Park"
+                android:textColor="@color/my_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Distance and Time -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/distance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14 km from FORT"
+                    android:textColor="@color/my_primary3"
+                    android:textSize="16sp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0hr 30min"
+                    android:textColor="@color/my_primary3"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Rating Row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- 4 Full Stars -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star" />
+
+                <!-- Half Star -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_half" />
+
+                <!-- Rating Text -->
+                <TextView
+                    android:id="@+id/rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5 rating"
+                    android:textSize="15sp"
+                    android:textColor="@color/my_primary"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- About the place -->
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beddagana Wetland Park provides a home for a wide variety of wetland birds, butterflies, fishes, and various animals amongst wetland vegetation and tranquil ponds as well as the Diyawanna Lake. This is a ‘live demonstration’ that aims to underscore wetlands’ importance to the overall ‘livability’ of cities such as Colombo."
+                android:textColor="@color/my_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Opening Hours -->
+            <TextView
+                android:id="@+id/opening_hours_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opening Hours"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/opening_hours_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:30 AM - 06:00 PM"
+                android:textColor="@color/my_primary"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Pricing Section -->
+            <TextView
+                android:id="@+id/pricing_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pricing"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/adult_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2$ Per Adult"
+                android:textColor="@color/my_primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/child_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1$ Per Child"
+                android:textSize="16sp"
+                android:textColor="@color/my_primary" />
+
+            <!-- Convert Currency Section -->
+            <TextView
+                android:id="@+id/convert_currency_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convert Currency"
+                android:textColor="@color/my_primary3"
+                android:layout_gravity="end"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Horizontal Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/my_primary3"
+                android:layout_marginTop="12dp" />
+
+            <!-- Reserve Tickets Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="40dp">
+
+                <TextView
+                    android:id="@+id/reserve_tickets_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reserve Your Tickets"
+                    android:textColor="@color/my_primary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/book_button"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="BOOK"
+                    android:textColor="@color/my_primary2"
+                    android:backgroundTint="@color/my_primary"
+                    android:drawablePadding="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

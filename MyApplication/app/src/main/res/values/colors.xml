@@ -3,5 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="my_primary">#0C5F6F</color>
-    <color name="bottom_nav_icon_color">#F2FDFE</color>
+    <color name="my_primary2">#F2FDFE</color>
+    <color name="my_primary3">#23D2F4</color>
 </resources>
