@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/my_primary2"
+    android:padding="16dp"
+    tools:context=".BookingActivity">
+
+    <!-- Back Icon and "Confirm and pay" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_back2"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm and pay"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Section with Image and Destination Details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Image -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:src="@drawable/place_img_1"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Destination Details Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination"
+                android:textColor="@color/my_primary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beddagana Wetland Park"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination Type"
+                android:textColor="@color/my_primary"
+                android:layout_marginTop="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nature Park"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Reservation Date Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <!-- Reservation Date Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservation Date"
+            android:textColor="@color/my_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <!-- Date Select Option -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your date"
+            android:textColor="@color/my_primary"
+            android:background="#C7F0F6"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Number of Members Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Members"
+        android:textColor="@color/my_primary"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Adults Count Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adults"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age 13+"
+                android:textColor="@color/my_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Adult Counter -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/minus_adults"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/my_primary2" />
+
+
+            <TextView
+                android:id="@+id/adult_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/my_primary"
+                android:paddingHorizontal="12dp" />
+
+            <Button
+                android:id="@+id/plus_adults"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/my_primary2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Children Count Section-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Children"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age Under 12"
+                android:textColor="@color/my_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Children Counter -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/minus_children"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/my_primary2" />
+
+            <TextView
+                android:id="@+id/children_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/my_primary"
+                android:paddingHorizontal="12dp" />
+
+            <Button
+                android:id="@+id/plus_children"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/my_primary2"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Horizontal Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_primary3"
+        android:layout_marginTop="16dp" />
+
+    <!-- Price Details Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price Details"
+        android:textColor="@color/my_primary"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Price Breakdown -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <!-- Adults Price -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="fill_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2.00 * 2 Adults"
+                android:textSize="16sp"
+                android:textColor="@color/my_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$4.00"
+                android:textSize="16sp"
+                android:textColor="@color/my_primary" />
+        </LinearLayout>
+
+        <!-- Children Price -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="fill_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$1.00 * 2 Children"
+                android:textSize="16sp"
+                android:textColor="@color/my_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2.00"
+                android:textSize="16sp"
+                android:textColor="@color/my_primary" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
