@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/my_primary2"
     tools:context=".DetailsActivity">
 
     <!-- Destination Image at the top -->
@@ -83,7 +84,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
 
             <!-- Destination Name -->
             <TextView
@@ -108,7 +111,8 @@
                     android:layout_height="wrap_content"
                     android:text="14 km from FORT"
                     android:textColor="@color/my_primary3"
-                    android:textSize="16sp"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
                     android:layout_weight="1" />
 
                 <TextView
@@ -117,7 +121,8 @@
                     android:layout_height="wrap_content"
                     android:text="0hr 30min"
                     android:textColor="@color/my_primary3"
-                    android:textSize="16sp" />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <!-- Rating Row -->
@@ -160,7 +165,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4.5 rating"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textColor="@color/my_primary"
                     android:layout_marginStart="8dp" />
             </LinearLayout>
@@ -172,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:text="Beddagana Wetland Park provides a home for a wide variety of wetland birds, butterflies, fishes, and various animals amongst wetland vegetation and tranquil ponds as well as the Diyawanna Lake. This is a ‘live demonstration’ that aims to underscore wetlands’ importance to the overall ‘livability’ of cities such as Colombo."
                 android:textColor="@color/my_primary"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:layout_marginTop="12dp" />
 
             <!-- Opening Hours -->
@@ -183,7 +188,7 @@
                 android:text="Opening Hours"
                 android:textColor="@color/my_primary"
                 android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:layout_marginTop="12dp" />
 
             <TextView
@@ -192,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:text="06:30 AM - 06:00 PM"
                 android:textColor="@color/my_primary"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:layout_marginTop="4dp" />
 
             <!-- Pricing Section -->
@@ -203,7 +208,7 @@
                 android:text="Pricing"
                 android:textColor="@color/my_primary"
                 android:textStyle="bold"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:layout_marginTop="12dp" />
 
             <TextView
@@ -212,14 +217,14 @@
                 android:layout_height="wrap_content"
                 android:text="2$ Per Adult"
                 android:textColor="@color/my_primary"
-                android:textSize="16sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/child_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1$ Per Child"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textColor="@color/my_primary" />
 
             <!-- Convert Currency Section -->
@@ -230,7 +235,7 @@
                 android:text="Convert Currency"
                 android:textColor="@color/my_primary3"
                 android:layout_gravity="end"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:layout_marginTop="12dp" />
 
             <!-- Horizontal Line -->
@@ -247,7 +252,7 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginBottom="50dp">
 
                 <TextView
                     android:id="@+id/reserve_tickets_text"
@@ -262,8 +267,10 @@
                 <Button
                     android:id="@+id/book_button"
                     android:layout_width="120dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:text="BOOK"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
                     android:textColor="@color/my_primary2"
                     android:backgroundTint="@color/my_primary"
                     android:drawablePadding="8dp" />

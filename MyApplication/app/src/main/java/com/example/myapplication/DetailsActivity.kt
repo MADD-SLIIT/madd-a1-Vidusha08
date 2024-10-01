@@ -31,7 +31,7 @@ class DetailsActivity : AppCompatActivity() {
 
         val bookButton = findViewById<Button>(R.id.book_button)
         bookButton.setOnClickListener {
-            navigateToMainActivity()
+            navigateToBookingActivity()
         }
 
     }
@@ -44,6 +44,12 @@ class DetailsActivity : AppCompatActivity() {
 
     private fun navigateToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navigateToBookingActivity() {
+        val intent = Intent(this, BookingActivity::class.java)
         startActivity(intent)
         finish()
     }

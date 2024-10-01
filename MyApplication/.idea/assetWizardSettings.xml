@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/star_rate/baseline_star_rate_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/radio_button_unchecked/baseline_radio_button_unchecked_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ebdc05" />
-                            <entry key="outputName" value="star" />
+                            <entry key="color" value="0c5f6f" />
+                            <entry key="outputName" value="radio_button_unchecked" />
                             <entry key="sourceFile" value="D:\MADD\CEYGO_TravelApp\madd-a1-Vidusha08\MyApplication" />
                           </map>
                         </option>
