@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/my_primary2"
+    android:padding="16dp"
+    tools:context=".BookingActivity">
+
+    <!-- Back Icon and "Booking Confirmation" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_back2"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Confirmation"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Section with Image and Destination Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <!-- Image -->
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/place_img_1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Destination Details Section -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destination"
+                        android:textColor="@color/my_primary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beddagana Wetland Park"
+                        android:textColor="@color/my_primary"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destination Type"
+                        android:textColor="@color/my_primary"
+                        android:layout_marginTop="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nature Park"
+                        android:textColor="@color/my_primary"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reservation_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reservation Details"
+                android:textColor="#0C5F6F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Number of Members Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Members"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Adults Count Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adults"
+                        android:textColor="@color/my_primary"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age 13+"
+                        android:textColor="@color/my_primary"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- Adult Counter -->
+                <TextView
+                        android:id="@+id/adult_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/my_primary"
+                        android:paddingHorizontal="12dp" />
+
+            </LinearLayout>
+
+            <!-- Children Count Section-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Children"
+                        android:textColor="@color/my_primary"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age Under 12"
+                        android:textColor="@color/my_primary"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- Children Counter -->
+                <TextView
+                        android:id="@+id/children_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/my_primary"
+                        android:paddingHorizontal="12dp" />
+
+            </LinearLayout>
+
+            <!-- Reservation Date Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <!-- Reservation Date Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reservation Date"
+                    android:textColor="@color/my_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+
+                <!-- Date Select Option -->
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MM/DD/YYYY"
+                    android:textStyle="bold"
+                    android:textColor="@color/my_primary"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Price Details Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Details"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Price Breakdown -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <!-- Subtotal -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="fill">
+
+                    <TextView
+                        android:id="@+id/subtotal_label"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal(USD)"
+                        android:textSize="16sp"
+                        android:textColor="@color/my_primary"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:id="@+id/subtotal_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textSize="16sp"
+                        android:textColor="@color/my_primary"
+                        android:layout_marginStart="120dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Booking Fee -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="fill_horizontal">
+
+                    <TextView
+                        android:id="@+id/booking_fee_label"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Booking Fee(USD)"
+                        android:textSize="16sp"
+                        android:textColor="@color/my_primary" />
+
+                    <TextView
+                        android:id="@+id/booking_fee_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textSize="16sp"
+                        android:textColor="@color/my_primary"
+                        android:layout_marginStart="120dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Total -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="fill_horizontal">
+
+                    <TextView
+                        android:id="@+id/total_label"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total(USD)"
+                        android:textColor="@color/my_primary"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/total_value"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textColor="@color/my_primary"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:layout_marginStart="120dp"
+                        android:gravity="end"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Cancel Reservation -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Not sure? You can cancel this reservation up to 48 hours in advance for a full refund."
+                    android:textColor="@color/my_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cancel_reservation"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Cancel Reservation"
+                    android:textColor="#EB001B"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Horizontal Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/my_primary3"
+                android:layout_marginTop="16dp" />
+
+            <!-- Price Details Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QR Code"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- QR Image -->
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/qr_code"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="16dp" />
+
+
+
+            <!-- Horizontal Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/my_primary3"
+                android:layout_marginTop="16dp" />
+
+            <!-- Payment Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="50dp">
+
+                <Button
+                    android:id="@+id/done_button"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:text="Done"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/my_primary2"
+                    android:backgroundTint="@color/my_primary"
+                    android:drawablePadding="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

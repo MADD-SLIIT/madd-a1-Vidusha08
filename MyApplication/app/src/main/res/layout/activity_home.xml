@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/my_primary2"
     tools:context=".HomeActivity"
     android:gravity="center_horizontal">
 
@@ -12,10 +13,10 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="240dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/logo" />
 
     <RelativeLayout
@@ -78,7 +79,7 @@
         android:id="@+id/top_destinations_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="200dp"
         android:text="Top Destinations"
         android:layout_marginStart="20dp"
         android:textColor="#0C5F6F"
@@ -91,7 +92,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="200dp">
+        android:layout_marginTop="230dp">
 
         <!-- Destination Image -->
         <androidx.cardview.widget.CardView
@@ -167,7 +168,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="470dp">
+            android:layout_marginTop="500dp">
 
             <!-- Destination Image -->
             <androidx.cardview.widget.CardView
@@ -209,7 +210,7 @@
                         android:id="@+id/place_name_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="YaLa National Wildlife Park"
+                        android:text="Yala National Wildlife Park"
                         android:textColor="@color/my_primary"
                         android:textStyle="bold"
                         android:textSize="16sp" />

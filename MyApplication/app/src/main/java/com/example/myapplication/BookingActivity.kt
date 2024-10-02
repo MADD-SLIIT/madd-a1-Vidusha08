@@ -19,6 +19,7 @@ class BookingActivity : AppCompatActivity() {
     private var childrenCount = 0
     private val adultPrice = 2.00
     private val childrenPrice = 1.00
+    private var selectedDate: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +28,7 @@ class BookingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.backIcon.setOnClickListener {
-            navigateToBookingActivity()
+            navigateToDetailsActivity()
         }
 
         // Date picker button
@@ -93,19 +94,26 @@ class BookingActivity : AppCompatActivity() {
         // Proceed to Payment button
         val proceedToPaymentButton: Button = findViewById(R.id.proceed_to_payment)
         proceedToPaymentButton.setOnClickListener {
-            navigateToMainActivity()
+            navigateToConfirmActivity(totalPriceValue.text.toString())
         }
 
     }
 
-    private fun navigateToBookingActivity() {
+    private fun navigateToDetailsActivity() {
         val intent = Intent(this, DetailsActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-    private fun navigateToMainActivity() {
-        val intent = Intent(this, MainActivity::class.java)
+    private fun navigateToConfirmActivity(subtotal: String) {
+        val intent = Intent(this, ConfirmActivity::class.java)
+        intent.putExtra("adultCount", adultCount)
+        intent.putExtra("childrenCount", childrenCount)
+        intent.putExtra("reservationDate", selectedDate)
+        intent.putExtra("subtotal", subtotal)
+        intent.putExtra("bookingFee", "0.25")
+        val total = (subtotal.replace("$", "").toDouble() + 0.25).toString() // Adding booking fee
+        intent.putExtra("total", "$$total")
         startActivity(intent)
         finish()
     }
@@ -118,7 +126,8 @@ class BookingActivity : AppCompatActivity() {
 
         val datePickerDialog = DatePickerDialog(this, { _: DatePicker, selectedYear: Int, selectedMonth: Int, selectedDay: Int ->
             val monthDisplay = selectedMonth + 1 // Month is 0-indexed
-            selectedDateText.text = String.format("%02d/%02d/%04d", selectedDay, monthDisplay, selectedYear)
+            selectedDate = String.format("%02d/%02d/%04d", selectedDay, monthDisplay, selectedYear) // Update selectedDate
+            selectedDateText.text = selectedDate // Display selected date in the TextView
         }, year, month, day)
 
         datePickerDialog.show()

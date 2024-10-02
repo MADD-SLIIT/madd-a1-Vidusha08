@@ -8,16 +8,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@drawable/splash_background"
-    tools:context=".SplashActivity">
-    <!-- android:layout_marginTop="16dp" -->
+    android:background="@color/my_primary2"
+    tools:context=".SplashActivity"
+    android:layout_marginTop="16dp" >
+
+    <!-- Splash Image-->
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_img" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="-50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
 
@@ -28,6 +37,7 @@
             android:text="Get Start >>"
             android:textStyle="bold"
             android:textSize="20sp"
+            android:textColor="@color/my_primary2"
             android:layout_margin="10dp"
             android:padding="10dp"/>
 
@@ -38,13 +48,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Plan and reserve your travel destinations"
-            android:textColor="#23D2F4"
+            android:textColor="@color/my_primary3"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -52,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" through here and enjoy many more"
-            android:textColor="#23D2F4"
+            android:textColor="@color/my_primary3"
             android:textStyle="bold"
             android:textSize="18sp"/>
 
@@ -60,15 +70,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="services with"
-            android:textColor="#23D2F4"
+            android:textColor="@color/my_primary3"
             android:textStyle="bold"
             android:textSize="18sp"/>
 
     </LinearLayout>
 
     <ImageView
-        android:layout_width="280dp"
-        android:layout_height="80dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/logo"/>
 
