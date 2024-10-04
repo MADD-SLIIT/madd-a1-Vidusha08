@@ -26,7 +26,7 @@ class DetailsActivity : AppCompatActivity() {
 
         val convertCurrencyText = findViewById<TextView>(R.id.convert_currency_text)
         convertCurrencyText.setOnClickListener {
-            navigateToMainActivity()
+            navigateToCurrencyActivity()
         }
 
         val bookButton = findViewById<Button>(R.id.book_button)
@@ -42,8 +42,8 @@ class DetailsActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun navigateToMainActivity() {
-        val intent = Intent(this, MainActivity::class.java)
+    private fun navigateToCurrencyActivity() {
+        val intent = Intent(this, CurrencyActivity::class.java)
         startActivity(intent)
         finish()
     }

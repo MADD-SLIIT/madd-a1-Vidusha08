@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/radio_button_unchecked/baseline_radio_button_unchecked_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/contact_page/baseline_contact_page_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,7 +29,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="0c5f6f" />
-                            <entry key="outputName" value="radio_button_unchecked" />
+                            <entry key="outputName" value="contactus_icon" />
                             <entry key="sourceFile" value="D:\MADD\CEYGO_TravelApp\madd-a1-Vidusha08\MyApplication" />
                           </map>
                         </option>

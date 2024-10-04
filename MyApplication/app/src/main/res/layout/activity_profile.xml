@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary2"
+    tools:context=".HomeActivity"
+    android:gravity="center_horizontal">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
+
+        <!-- Back Icon and "Profile" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_back2"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/profile_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="David"
+                android:textColor="@color/my_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/show_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Profile"
+                android:textColor="@color/my_primary3"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!-- Horizontal Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/my_primary3"
+            android:layout_marginTop="12dp" />
+
+        <!-- Account Settings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Settings"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Personal Info Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/personal_info_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@color/my_primary2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- First Icon from drawable -->
+                <ImageView
+                    android:id="@+id/personal_info_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/person_info_icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Text for "Personal information" -->
+                <TextView
+                    android:id="@+id/personal_info_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Personal Information"
+                    android:textSize="18sp"
+                    android:textColor="@color/my_primary"
+                    android:textStyle="bold" />
+
+                <!-- Forward Arrow Icon -->
+                <ImageView
+                    android:id="@+id/forward_arrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Booking History Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/booking_history_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@color/my_primary2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- First Icon from drawable -->
+                <ImageView
+                    android:id="@+id/booking_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/booking_history"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Text for "Personal information" -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Booking History"
+                    android:textSize="18sp"
+                    android:textColor="@color/my_primary"
+                    android:textStyle="bold" />
+
+                <!-- Forward Arrow Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Convert Currency Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/convert_currency_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@color/my_primary2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- First Icon from drawable -->
+                <ImageView
+                    android:id="@+id/Convert_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/currency_exchange_icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Text for "Personal information" -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Convert Currency"
+                    android:textSize="18sp"
+                    android:textColor="@color/my_primary"
+                    android:textStyle="bold" />
+
+                <!-- Forward Arrow Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Privacy & Sharing Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/privacy_sharing_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@color/my_primary2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- First Icon from drawable -->
+                <ImageView
+                    android:id="@+id/privacy_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/privacy_icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Text for "Personal information" -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Privacy and Sharing"
+                    android:textSize="18sp"
+                    android:textColor="@color/my_primary"
+                    android:textStyle="bold" />
+
+                <!-- Forward Arrow Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Contact Us Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contactus_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:elevation="4dp"
+            android:backgroundTint="@color/my_primary2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- First Icon from drawable -->
+                <ImageView
+                    android:id="@+id/contactus_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/contactus_icon"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Text for "Personal information" -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Contact Us"
+                    android:textSize="18sp"
+                    android:textColor="@color/my_primary"
+                    android:textStyle="bold" />
+
+                <!-- Forward Arrow Icon -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_right" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Payment Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="[->   Logout"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/my_primary2"
+                android:backgroundTint="@color/my_primary"
+                android:drawablePadding="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/my_primary"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/my_primary2"
+        app:itemTextColor="@color/my_primary2"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="32dp" />
+
+</RelativeLayout>

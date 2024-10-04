@@ -19,224 +19,272 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/logo" />
 
-    <RelativeLayout
-        android:id="@+id/search_row"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="horizontal">
-
-        <!-- Search box -->
-        <RelativeLayout
-            android:id="@+id/search_bar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@id/world_icon"
-            android:padding="10dp"
-            android:background="@drawable/search_box">
-
-            <!-- Search Icon -->
-            <ImageView
-                android:id="@+id/search_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:src="@drawable/icon_search"/>
-
-            <!-- Explore Text -->
-            <TextView
-                android:id="@+id/explore_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/search_icon"
-                android:layout_marginStart="20dp"
-                android:layout_centerVertical="true"
-                android:text="Explore"
-                android:textColor="@color/my_primary"
-                android:textSize="18sp" />
-        </RelativeLayout>
-
-        <!-- World Icon -->
-        <ImageView
-            android:id="@+id/world_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/icon_language"
-            android:layout_marginStart="10dp" />
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/top_destinations_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:text="Top Destinations"
-        android:layout_marginStart="20dp"
-        android:textColor="#0C5F6F"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-        <LinearLayout
-        android:id="@+id/destination_section_1"
+    <LinearLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginTop="230dp">
+        android:layout_marginTop="130dp">
 
-        <!-- Destination Image -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="320dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="@android:color/transparent">
-
-            <ImageView
-                android:id="@+id/place_img_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/place_img_1" />
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Horizontal layout for text  -->
         <LinearLayout
+            android:id="@+id/search_row"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:padding="10dp">
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
 
-            <!-- Text Section (Name and Description) -->
+            <!-- Search box -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="40dp"
-                android:orientation="vertical">
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:background="@drawable/search_box">
 
-                <!-- Destination Name -->
+                <!-- Search Icon -->
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/icon_search"/>
+
+                <!-- Explore Text -->
                 <TextView
-                    android:id="@+id/place_name_1"
+                    android:id="@+id/explore_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Beddagana Wetland Park"
+                    android:layout_marginStart="20dp"
+                    android:layout_centerVertical="true"
+                    android:text="Explore"
                     android:textColor="@color/my_primary"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
-
-                <!-- Destination Description -->
-                <TextView
-                    android:id="@+id/place_desc_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Best Wetland Park Near Capital"
-                    android:textColor="@color/my_primary"
-                    android:textSize="14sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <!-- Bookmark Icon -->
+            <!-- World Icon -->
             <ImageView
-                android:id="@+id/bookmark_icon_1"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:id="@+id/world_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_bookmark" />
+                android:src="@drawable/icon_language"/>
 
         </LinearLayout>
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/top_destinations_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Top Destinations"
+            android:layout_marginStart="20dp"
+            android:textColor="#0C5F6F"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <LinearLayout
-            android:id="@+id/destination_section_2"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+            android:id="@+id/destination_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="500dp">
+            android:paddingBottom="150dp">
 
-            <!-- Destination Image -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="320dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="12dp"
-                app:cardCornerRadius="25dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@android:color/transparent">
+                <!-- Destination Image -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
 
-                <ImageView
-                    android:id="@+id/place_img_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/place_img_2"
-                    android:layout_marginBottom="5dp" />
+                    <ImageView
+                        android:id="@+id/place_img_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/place_img_1" />
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center_vertical"
-                android:padding="10dp">
-
-                <!-- Text Section (Name and Description) -->
+                <!-- Horizontal layout for text  -->
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="40dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
 
-                    <!-- Destination Name -->
-                    <TextView
-                        android:id="@+id/place_name_2"
-                        android:layout_width="wrap_content"
+                    <!-- Text Section (Name and Description) -->
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Yala National Wildlife Park"
-                        android:textColor="@color/my_primary"
-                        android:textStyle="bold"
-                        android:textSize="16sp" />
+                        android:layout_weight="1"
+                        android:layout_marginStart="40dp"
+                        android:orientation="vertical">
 
-                    <!-- Destination Description -->
-                    <TextView
-                        android:id="@+id/place_desc_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2nd Largest National Park of Sri lanka"
-                        android:textColor="@color/my_primary"
-                        android:textSize="14sp" />
+                        <!-- Destination Name -->
+                        <TextView
+                            android:id="@+id/place_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beddagana Wetland Park"
+                            android:textColor="@color/my_primary"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <!-- Destination Description -->
+                        <TextView
+                            android:id="@+id/place_desc_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Best Wetland Park Near Capital"
+                            android:textColor="@color/my_primary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Bookmark Icon -->
+                    <ImageView
+                        android:id="@+id/bookmark_icon_1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/ic_bookmark" />
+
                 </LinearLayout>
 
-                <!-- Bookmark Icon -->
-                <ImageView
-                    android:id="@+id/bookmark_icon_2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:src="@drawable/ic_bookmark" />
+                <!-- Destination Image -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/place_img_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/place_img_2"
+                        android:layout_marginBottom="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <!-- Text Section (Name and Description) -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="40dp"
+                        android:orientation="vertical">
+
+                        <!-- Destination Name -->
+                        <TextView
+                            android:id="@+id/place_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yala National Wildlife Park"
+                            android:textColor="@color/my_primary"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <!-- Destination Description -->
+                        <TextView
+                            android:id="@+id/place_desc_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2nd Largest National Park of Sri lanka"
+                            android:textColor="@color/my_primary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Bookmark Icon -->
+                    <ImageView
+                        android:id="@+id/bookmark_icon_2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/ic_bookmark" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+    </LinearLayout>
+
+
+    <!-- Language Selection -->
+    <LinearLayout
+        android:id="@+id/language_overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="160dp"
+        android:visibility="invisible"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/selection_background"
+            android:elevation="4dp">
+
+            <TextView
+                android:id="@+id/select_language_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Language"
+                android:textSize="14sp"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:textColor="@color/my_primary3"
+                android:backgroundTint="@color/my_primary2"/>
+
+            <Button
+                android:id="@+id/btn_sinhala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sinhala"
+                android:textColor="@color/my_primary2"
+                android:backgroundTint="@color/my_primary"/>
 
         </LinearLayout>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

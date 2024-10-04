@@ -1,5 +1,5 @@
 [versions]
-agp = "8.5.1"
+agp = "8.5.2"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -12,6 +12,8 @@ constraintlayout = "2.1.4"
 googleGmsGoogleServices = "4.4.2"
 firebaseAuth = "23.0.0"
 firebaseFirestore = "25.1.0"
+playServicesMaps = "19.0.0"
+places = "2.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,6 +26,8 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+places = { module = "com.google.android.libraries.places:places", version.ref = "places" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
