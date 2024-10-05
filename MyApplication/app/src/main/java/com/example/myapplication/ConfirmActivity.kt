@@ -6,6 +6,10 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityConfirmBinding
+import com.example.myapplication.util.UiUtil
+import com.example.myapplication.model.BookingModel
+import android.view.View
+import com.google.firebase.firestore.FirebaseFirestore
 
 class ConfirmActivity : AppCompatActivity() {
 
@@ -18,6 +22,10 @@ class ConfirmActivity : AppCompatActivity() {
     private lateinit var bookingFeeValue: TextView
     private lateinit var totalValue: TextView
     private lateinit var cancelReservation: TextView
+    private lateinit var doneButton: View
+
+    // Initialize Firebase Firestore
+    private val firestore: FirebaseFirestore by lazy { FirebaseFirestore.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +41,7 @@ class ConfirmActivity : AppCompatActivity() {
         bookingFeeValue = findViewById(R.id.booking_fee_value)
         totalValue = findViewById(R.id.total_value)
         cancelReservation = findViewById(R.id.cancel_reservation)
+        doneButton = binding.doneButton
 
         binding.backIcon.setOnClickListener {
             navigateToBookingActivity()
@@ -46,7 +55,7 @@ class ConfirmActivity : AppCompatActivity() {
         val bookingFee = intent.getStringExtra("bookingFee")
         val total = intent.getStringExtra("total")
 
-        // Setting received data in views
+        // Setting received data
         adultCount.text = adults.toString()
         childrenCount.text = children.toString()
         reservationDate.text = date
@@ -54,15 +63,13 @@ class ConfirmActivity : AppCompatActivity() {
         bookingFeeValue.text = bookingFee
         totalValue.text = total
 
-        // Cancel reservation click handler
+        // Cancel reservation
         cancelReservation.setOnClickListener {
-            // Handle reservation cancellation logic
             cancelBooking()
         }
 
         binding.doneButton.setOnClickListener {
-            startActivity(Intent(this,HomeActivity::class.java))
-            finish()
+            saveBookingDetails()
         }
     }
 
@@ -72,11 +79,42 @@ class ConfirmActivity : AppCompatActivity() {
         finish()
     }
 
-    // Function to handle booking cancellation
+    // Booking cancellation
     private fun cancelBooking() {
         val intent = Intent(this, BookingActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
     }
 
+    private fun saveBookingDetails() {
+        // Get the details to save
+        val placeName = findViewById<TextView>(R.id.place_name).text.toString()
+        val adultCountText = adultCount.text.toString()
+        val childrenCountText = childrenCount.text.toString()
+        val reservationDateText = reservationDate.text.toString()
+        val totalValueText = totalValue.text.toString()
+
+        // Create a new booking model object
+        val booking = BookingModel(
+            placeName = placeName,
+            adultCount = adultCountText,
+            childrenCount = childrenCountText,
+            reservationDate = reservationDateText,
+            totalValue = totalValueText
+        )
+
+        // Reference to Firebase Firestore
+        val bookingRef = firestore.collection("Bookings").document()
+
+        // Save the complete booking data
+        bookingRef.set(booking)
+            .addOnSuccessListener {
+                UiUtil.showToast(applicationContext, "Booking confirmed!")
+                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+            }
+            .addOnFailureListener { e ->
+                UiUtil.showToast(applicationContext, "Failed to save booking: ${e.message}")
+            }
+    }
 }

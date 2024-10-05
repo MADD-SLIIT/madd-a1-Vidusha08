@@ -57,6 +57,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // Add Firebase Storage dependency using the alias
+    implementation(libs.firebase.storage.ktx)
+
     // Add the Google Maps SDK
     implementation(libs.play.services.maps)
     implementation(libs.places)
