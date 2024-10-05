@@ -89,11 +89,15 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                     UiUtil.showToast(this, "Bookmark")
                     binding.bottomNavigation.menu.findItem(R.id.bottom_menu_map)
                         .icon?.setTint(ContextCompat.getColor(this, R.color.my_primary3))
+                    val intent = Intent(this, WishlistActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.bottom_menu_bell->{
                     UiUtil.showToast(this, "Notification")
                     binding.bottomNavigation.menu.findItem(R.id.bottom_menu_map)
                         .icon?.setTint(ContextCompat.getColor(this, R.color.my_primary3))
+                    val intent = Intent(this, NotificationActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.bottom_menu_profile->{
                     UiUtil.showToast(this, "Profile")

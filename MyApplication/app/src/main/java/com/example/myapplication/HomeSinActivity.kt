@@ -58,7 +58,7 @@ class HomeSinActivity : AppCompatActivity() {
             navigateToDetailsActivity()
         }
 
-        binding.placeImg2.setOnClickListener {
+        /* binding.placeImg2.setOnClickListener {
             navigateToDetailsActivity()
         }
 
@@ -68,7 +68,7 @@ class HomeSinActivity : AppCompatActivity() {
 
         binding.placeDesc2.setOnClickListener {
             navigateToDetailsActivity()
-        }
+        }*/
 
         binding.bottomNavigation.menu.getItem(0).isChecked = false
 

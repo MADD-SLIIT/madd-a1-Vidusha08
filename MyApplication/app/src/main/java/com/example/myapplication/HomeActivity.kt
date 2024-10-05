@@ -58,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
             navigateToDetailsActivity()
         }
 
-        binding.placeImg2.setOnClickListener {
+       /* binding.placeImg2.setOnClickListener {
             navigateToDetailsActivity()
         }
 
@@ -68,7 +68,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.placeDesc2.setOnClickListener {
             navigateToDetailsActivity()
-        }
+        }*/
 
         binding.bottomNavigation.menu.getItem(0).isChecked = false
 
@@ -94,11 +94,15 @@ class HomeActivity : AppCompatActivity() {
                     UiUtil.showToast(this, "Bookmark")
                     binding.bottomNavigation.menu.findItem(R.id.bottom_menu_map)
                         .icon?.setTint(ContextCompat.getColor(this, R.color.my_primary3))
+                    val intent = Intent(this, WishlistActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.bottom_menu_bell->{
                     UiUtil.showToast(this, "Notification")
                     binding.bottomNavigation.menu.findItem(R.id.bottom_menu_map)
                         .icon?.setTint(ContextCompat.getColor(this, R.color.my_primary3))
+                    val intent = Intent(this, NotificationActivity::class.java)
+                    startActivity(intent)
                 }
                 R.id.bottom_menu_profile->{
                     UiUtil.showToast(this, "Profile")

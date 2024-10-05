@@ -8,14 +8,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:layout_marginTop="16dp"
     android:background="@drawable/background"
     tools:context=".SignupActivity">
 
     <ImageView
         android:layout_width="240dp"
         android:layout_height="80dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/logo"/>
 
     <LinearLayout
